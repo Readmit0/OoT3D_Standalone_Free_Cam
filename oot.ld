@@ -9,7 +9,7 @@ SECTIONS
 	}
 
 	.patch_CameraUpdate 0x2D84C8 : {
-	    *(.patch_CameraUpdate)
+		*(.patch_CameraUpdate)
 	}
 
 	.patch_before_GlobalContext_Update 0x452390 : {
@@ -23,7 +23,7 @@ SECTIONS
 	.patch_MultiplyPlayerSpeed 0x251D34 : {
 		*(.patch_MultiplyPlayerSpeed)
 	}
-	
+
 	.patch_RunAnimationSpeed 0x2BE70C : {
 		*(.patch_RunAnimationSpeed)
 	}
@@ -79,6 +79,7 @@ SECTIONS
 		*(.data)
 		*(.bss)
 		*(COMMON)
+		rCustomMessages = . ;
 		__text_end  = . ;
 	}
 }
