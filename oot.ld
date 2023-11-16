@@ -64,6 +64,18 @@ SECTIONS
 		*(.patch_ISGPutaway)
 	}
 
+	.patch_OoBBombchuOne 0x315120 : {
+        *(.patch_OoBBombchuOne)
+	}
+
+	.patch_OoBBombchuTwo 0x31513C : {
+        *(.patch_OoBBombchuTwo)
+	}
+
+	.patch_OoBBombchuThree 0x315150 : {
+        *(.patch_OoBBombchuThree)
+	}
+
 	. = 0x4C99A8;
 	. = ALIGN(4);
 	.loader : {
