@@ -68,3 +68,18 @@ ISGCrouchStab_patch:
 .global ISGPutaway_patch
 ISGPutaway_patch:
     nop
+
+.section .patch_OoBBombchuOne
+.global OoBBombchuOne_patch
+OoBBombchuOne_patch:
+    bl hook_OoBBombchuOne
+
+.section .patch_OoBBombchuTwo
+.global OoBBombchuTwo_patch
+OoBBombchuTwo_patch:
+    bl hook_OoBBombchuTwo
+
+.section .patch_OoBBombchuThree
+.global OoBBombchuThree_patch
+OoBBombchuThree_patch:
+    bl hook_OoBBombchuThree
