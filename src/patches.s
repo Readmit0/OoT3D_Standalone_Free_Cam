@@ -59,6 +59,22 @@ AmyBlockCooldownTimer_patch:
 .section .patch_FireBlockSpeed
     .word 0x3DCCCCCD
 
+.section .patch_MovableBlockSpeed
+    .word 0x40800000
+
+.section .patch_MovableBlockCooldownTimer
+.global MovableBlockCooldownTimer_patch
+MovableBlockCooldownTimer_patch:
+    mov r0,#0x1
+
+.section .patch_MilkCrateSpeed
+    .word 0x40800000
+
+.section .patch_MilkCrateCooldownTimer
+.global MilkCrateCooldownTimer_patch
+MilkCrateCooldownTimer_patch:
+    mov r0,#0x1
+
 .section .patch_ISGCrouchStab
 .global ISGCrouchStab_patch
 ISGCrouchStab_patch:
@@ -83,3 +99,23 @@ OoBBombchuTwo_patch:
 .global OoBBombchuThree_patch
 OoBBombchuThree_patch:
     bl hook_OoBBombchuThree
+
+.section .patch_ItemGiveBombchuDropOne
+.global ItemGiveBombchuDropOne_patch
+ItemGiveBombchuDropOne_patch:
+    mov r1,#0x96
+
+.section .patch_ItemGiveBombchuDropTwo
+.global ItemGiveBombchuDropTwo_patch
+ItemGiveBombchuDropTwo_patch:
+    mov r1,#0x96
+
+.section .patch_ConvertBombDropOne
+.global ConvertBombDropOne_patch
+ConvertBombDropOne_patch:
+    b hook_ConvertBombDropOne
+
+.section .patch_ConvertBombDropTwo
+.global ConvertBombDropTwo_patch
+ConvertBombDropTwo_patch:
+    b hook_ConvertBombDropTwo
