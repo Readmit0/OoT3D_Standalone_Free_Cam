@@ -56,6 +56,22 @@ SECTIONS
 		*(.patch_FireBlockSpeed)
 	}
 
+	.patch_MovableBlockCooldownTimer 0x3BD46C : {
+		*(.patch_MovableBlockCooldownTimer)
+	}
+
+	.patch_MovableBlockSpeed 0x3BD508 : {
+		*(.patch_MovableBlockSpeed)
+	}
+
+	.patch_MilkCrateCooldownTimer 0x3BD85C : {
+		*(.patch_MilkCrateCooldownTimer)
+	}
+
+	.patch_MilkCrateSpeed 0x3BD88C : {
+		*(.patch_MilkCrateSpeed)
+	}
+
 	.patch_ISGCrouchStab 0x360690 : {
 		*(.patch_ISGCrouchStab)
 	}
@@ -65,15 +81,31 @@ SECTIONS
 	}
 
 	.patch_OoBBombchuOne 0x315120 : {
-        *(.patch_OoBBombchuOne)
+		*(.patch_OoBBombchuOne)
 	}
 
 	.patch_OoBBombchuTwo 0x31513C : {
-        *(.patch_OoBBombchuTwo)
+		*(.patch_OoBBombchuTwo)
 	}
 
 	.patch_OoBBombchuThree 0x315150 : {
-        *(.patch_OoBBombchuThree)
+		*(.patch_OoBBombchuThree)
+	}
+
+	.patch_ItemGiveBombchuDropOne 0x1F6F70 : {
+		*(.patch_ItemGiveBombchuDropOne)
+	}
+
+	.patch_patch_ItemGiveBombchuDropTwo 0x22BAE4 : {
+		*(.patch_ItemGiveBombchuDropTwo)
+	}
+
+	.patch_ConvertBombDropOne 0x35E46C : {
+		*(.patch_ConvertBombDropOne)
+	}
+
+	.patch_ConvertBombDropTwo 0x3747A4 : {
+	*(.patch_ConvertBombDropTwo)
 	}
 
 	. = 0x4C99A8;
