@@ -123,6 +123,7 @@ SECTIONS
 		*(.data)
 		*(.bss)
 		*(COMMON)
+		rCustomMessages = . ;
 		__text_end  = . ;
 	}
 }
