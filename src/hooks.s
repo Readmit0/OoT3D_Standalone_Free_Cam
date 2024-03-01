@@ -82,3 +82,20 @@ hook_OoBBombchuThree:
     bxeq lr
     ldrsh r0,[r5,#0xE]
     bx lr
+
+.global hook_ConvertBombDropOne
+hook_ConvertBombDropOne:
+    push {r1-r12, lr}
+    bl Item_ConvertBombDrop
+    pop {r1-r12, lr}
+    cpy r12,r0
+    b 0x35E474
+
+.global hook_ConvertBombDropTwo
+hook_ConvertBombDropTwo:
+    push {r1-r12, lr}
+    cpy r0,r6
+    bl Item_ConvertBombDrop
+    pop {r1-r12, lr}
+    cpy r6,r0
+    b 0x3747B0
